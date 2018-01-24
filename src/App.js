@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import ChartfilePlayer from './ChartfilePlayer';
-
+import ChartfileCharacter from './ChartfileCharacter';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +14,7 @@ class App extends Component {
           <h6>(This site assumes that tournament wins are all counted equal for statistics sake)</h6>
         </div>
         <ChartfilePlayer/>
+        <ChartfileCharacter/>
       </div>
     );
   }

@@ -1,6 +1,10 @@
 const base64 = require('base-64');
 const utf8 = require('utf8');
 
+/*
+TODO: Add time frame functionality
+*/
+
 function findLabel(data, index) {
   var retList = [];
 
@@ -57,7 +61,12 @@ function parseTab(currentYear, line) {
     }
 
     else if (tabDelimitedArray[i].indexOf("(SSBM)") !== -1) {
-      characters.push(tabDelimitedArray[i].split(" ")[0]);
+      if (tabDelimitedArray[i].split(" ").length === 2) {
+        characters.push(tabDelimitedArray[i].split(" ")[0]);
+      }
+      else if (tabDelimitedArray[i].split(" ").length === 3) {
+        characters.push(tabDelimitedArray[i].split(" ")[0] + " " + tabDelimitedArray[i].split(" ")[1]);
+      }
     }
 
     else {
@@ -68,6 +77,7 @@ function parseTab(currentYear, line) {
   if ((player) === "") {
     return;
   }
+
   return {
     "tournament": tournament,
     "player": player,

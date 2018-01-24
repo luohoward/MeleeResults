@@ -39,9 +39,6 @@ class ChartfilePlayer extends Component {
     }
   }
 
-  /*
-  TODO: Add time frame functionality for these next few functions
-  */
   generateBestPlayer() {
     var bestPlayers = [];
     for (var key in this.players) {
@@ -57,7 +54,6 @@ class ChartfilePlayer extends Component {
   }
 
   /*
-  TODO: Add a chart for best character
   TODO: Add click events
   */
 
@@ -65,7 +61,6 @@ class ChartfilePlayer extends Component {
     var results = readText(m_results);
     var colors = readText(m_colors);
     var jsonResults = generateJSONResults(results);
-    console.log(jsonResults);
     this.setPlayerArray(jsonResults);
     this.generateJSONColorResults(colors);
     var bestPlayers = this.generateBestPlayer();
