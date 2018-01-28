@@ -23,7 +23,7 @@ class App extends Component {
         <ChartfilePlayer/>
         <ChartfileCharacter/>
         <div className="App-header">
-          <h4><b>Why I Made this site</b></h4>
+          <h4><b>Why I made this site</b></h4>
           <p>I got really tired of my friend complaining that his character sucked instead of him actually improving at the game</p>
           <h6>I will try to update this site when I can. Data may be out of date sometimes</h6>
           <h6>If you want to help out, shoot me an email at bhowluo2@gmail.com</h6>
