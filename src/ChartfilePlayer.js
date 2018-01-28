@@ -35,7 +35,9 @@ class ChartfilePlayer extends Component {
     var colorArr = color.split("\n");
     for (var i = 0; i < colorArr.length; i++) {
       var a = colorArr[i].split(":");
-      this.players[a[0]].color = a[1];
+      if (this.players.hasOwnProperty(a[0])) {
+        this.players[a[0]].color = a[1];
+      }
     }
   }
 
@@ -70,6 +72,13 @@ class ChartfilePlayer extends Component {
         }
       }
     }
+
+    for (var key in this.players) {
+      if (this.players[key].tournaments.length === 0) {
+        delete this.players[key];
+      }
+    }
+    console.log(this.players);
     setHelperDictPlayer(this.players);
   }
 
