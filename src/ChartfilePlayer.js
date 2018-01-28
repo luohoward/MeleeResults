@@ -78,7 +78,6 @@ class ChartfilePlayer extends Component {
         delete this.players[key];
       }
     }
-    console.log(this.players);
     setHelperDictPlayer(this.players);
   }
 
